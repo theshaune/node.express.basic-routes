@@ -1,7 +1,7 @@
 /* Import routes */
 var aboutRoutes  = require('./about'),
     homeRoutes   = require('./home'),
-    storeRoutes  = require('./store'),
+    storeRoutes  = require('./store');
 
 /* Define variables */   
 var routes;
