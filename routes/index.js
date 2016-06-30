@@ -1,9 +1,14 @@
-var express = require('express');
-var router = express.Router();
+/* Import routes */
+var aboutRoutes  = require('./about'),
+    homeRoutes   = require('./home');
+    storeRoutes  = require('./store');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
 
-module.exports = router;
+/* Define routes */
+function routes(app) {
+  app.use('/', homeRoutes);
+  app.use('/about', aboutRoutes);
+  app.use('/store', storeRoutes);
+}
+
+module.exports = routes
